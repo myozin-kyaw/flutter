@@ -2,6 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:weather_app/additional_information_widget.dart';
+import 'package:weather_app/hourly_forecast_item.dart';
 
 class WeatherScreen extends StatelessWidget {
   const WeatherScreen({super.key});
@@ -32,6 +34,7 @@ class WeatherScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
               width: double.infinity,
@@ -77,14 +80,80 @@ class WeatherScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 20),
-            Placeholder(
-              fallbackHeight: 180,
+            const SizedBox(height: 14),
+            const Text(
+              'Weather Forecast',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 22,
+              ),
             ),
-            SizedBox(height: 20),
-            Placeholder(
-              fallbackHeight: 180,
+            const SizedBox(
+              height: 14,
             ),
+            const SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  HourlyForecastItem(
+                    time: '9:00',
+                    icon: Icons.cloud,
+                    tempreture: '301.1',
+                  ),
+                  HourlyForecastItem(
+                    time: '9:00',
+                    icon: Icons.sunny,
+                    tempreture: '301.1',
+                  ),
+                  HourlyForecastItem(
+                    time: '10:00',
+                    icon: Icons.snowing,
+                    tempreture: '301.1',
+                  ),
+                  HourlyForecastItem(
+                    time: '11:00',
+                    icon: Icons.snowing,
+                    tempreture: '301.1',
+                  ),
+                  HourlyForecastItem(
+                    time: '12:00',
+                    icon: Icons.snowing,
+                    tempreture: '301.1',
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 14),
+            const Text(
+              'Additional Information',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 22,
+              ),
+            ),
+            const SizedBox(
+              height: 14,
+            ),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                AdditionalInformationWidget(
+                  icon: Icons.water_drop,
+                  title: 'Humdity',
+                  value: '94',
+                ),
+                AdditionalInformationWidget(
+                  icon: Icons.air,
+                  title: 'Wind Speed',
+                  value: '7.67',
+                ),
+                AdditionalInformationWidget(
+                  icon: Icons.beach_access,
+                  title: 'Pressure',
+                  value: '1005',
+                ),
+              ],
+            )
           ],
         ),
       ),
