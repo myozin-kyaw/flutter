@@ -1,16 +1,14 @@
 # weather_app
 
-A new Flutter project.
+- Weather application is my second project while learning flutter.
+- During this project, I have a chance to know that 
+    - How to place widget in Row with Horizontal Scrolling,
+    - How to place widget in Row with Vertical Scrolling,
+    - Flutter Theme Dart and Light,
+    - How to bind Weather API in my project and 
+    - How to rerender API 
 
-## Getting Started
+- This is how development app look like
 
-This project is a starting point for a Flutter application.
+![alt text](https://github.com/[myozin-kyaw]/[flutter]/weather_app/asset/images/weather_app.iml)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
