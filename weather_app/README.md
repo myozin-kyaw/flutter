@@ -10,5 +10,6 @@
 
 - This is how development app look like
 
-![alt text](https://github.com/[myozin-kyaw]/[flutter]/blob/[main]/weather_app/lib/asset/images/demo.png)
+![demo](https://github.com/myozin-kyaw/flutter/assets/108007637/9ac58144-0973-4864-9423-8ac19a3f3256)
+
 
