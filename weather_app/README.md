@@ -10,5 +10,5 @@
 
 - This is how development app look like
 
-![alt text](https://github.com/[myozin-kyaw]/[flutter]/blob/[main]/weather_app/asset/images/Simulator Screenshot - iPhone 15 Pro Max - 2023-12-20 at 06.01.38.png)
+![alt text](https://github.com/[myozin-kyaw]/[flutter]/blob/[main]/weather_app/lib/asset/images/Simulator Screenshot - iPhone 15 Pro Max - 2023-12-20 at 06.01.38.png)
 
