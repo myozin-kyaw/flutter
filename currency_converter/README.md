@@ -1,16 +1,14 @@
 # currency_converter
 
-A new Flutter project.
+- Currency converter is my fisrt step of project learning in flutter.
+- During this project, I have a chance to know that 
+    - How to make installation of flutter project
+    - A few design of flutter ui like Material App design, Cupertino App design
+    - what is stateless widget
+    - what is statefull widget
+    - How to display text and how to use text attribute field
+    - And, How to function work
 
-## Getting Started
+- This is how development app look like
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
