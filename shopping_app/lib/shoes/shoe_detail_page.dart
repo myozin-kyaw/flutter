@@ -20,12 +20,6 @@ class ShoeDetailPage extends StatelessWidget {
             fontSize: 20,
           ),
         ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.arrow_circle_left),
-          )
-        ],
         centerTitle: true,
       ),
       body: SafeArea(
@@ -53,18 +47,44 @@ class ShoeDetailPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(40),
                 ),
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const SizedBox(height: 16.0),
+                    const SizedBox(height: 20.0),
                     Text(
                       '\$${shoe['price']}',
                       style: Theme.of(context).textTheme.titleLarge,
                     ),
-                    const SizedBox(height: 16.0),
-                    const ChipOne(
-                      items: ['1', '2', '3'], // shoe['sizes'] as List<String>,
+                    const SizedBox(height: 20.0),
+                    ChipOne(
+                      items: shoe['sizes'] as List<String>,
                       fontSize: 16,
-                      backgroundColor: Color.fromRGBO(216, 240, 253, 1),
+                      backgroundColor: const Color.fromRGBO(216, 240, 253, 1),
+                      hasBorder: true,
+                      paddingHorizontal: 10,
+                      paddingVertical: 5,
+                      borderRadius: 10,
                     ),
+                    Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: ElevatedButton.icon(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.shopping_cart_outlined,
+                          color: Colors.black,
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Theme.of(context).primaryColor,
+                          minimumSize: const Size(double.infinity, 50),
+                        ),
+                        label: const Text(
+                          'Add to cart',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 18,
+                          ),
+                        ),
+                      ),
+                    )
                   ],
                 ),
               ),

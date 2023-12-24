@@ -4,12 +4,20 @@ class ChipOne extends StatefulWidget {
   final List<String> items;
   final int fontSize;
   final Color backgroundColor;
+  final bool hasBorder;
+  final double paddingVertical;
+  final double paddingHorizontal;
+  final double borderRadius;
 
   const ChipOne({
     super.key,
     required this.items,
     required this.fontSize,
     required this.backgroundColor,
+    required this.hasBorder,
+    required this.paddingVertical,
+    required this.paddingHorizontal,
+    required this.borderRadius,
   });
 
   @override
@@ -50,13 +58,15 @@ class _ChipOneState extends State<ChipOne> {
                 labelStyle: const TextStyle(
                   fontSize: 16,
                 ),
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 24,
-                  vertical: 15,
+                padding: EdgeInsets.symmetric(
+                  horizontal: widget.paddingHorizontal,
+                  vertical: widget.paddingVertical,
                 ),
-                side: BorderSide.none,
+                side: widget.hasBorder
+                    ? const BorderSide(style: BorderStyle.solid)
+                    : BorderSide.none,
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50),
+                  borderRadius: BorderRadius.circular(widget.borderRadius),
                 ),
               ),
             ),

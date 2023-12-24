@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shopping_app/global_variable.dart';
-import 'package:shopping_app/shoes/shoe_detail_page.dart';
+import 'package:shopping_app/home_page.dart';
 
 void main() {
   runApp(const MyShoppingApp());
@@ -43,10 +42,7 @@ class MyShoppingApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: ShoeDetailPage(
-        shoe: shoes[0],
-      ),
-      // home: const HomePage(),
+      home: const HomePage(),
     );
   }
 }

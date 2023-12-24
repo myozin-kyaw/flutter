@@ -4,7 +4,8 @@ final shoes = [
     'title': 'Nike Men\'s Shoe',
     'price': 44.52,
     'company': 'Nike',
-    'size': ['38', '39', '40', '41', '42', '43', '44', '45'],
+    // 'sizes': [38, 39, 40, 41, 42, 43, 44, 45],
+    'sizes': ['38', '39', '40', '41', '42', '43', '44', '45'],
     'image': 'assets/images/shoes_1.png',
   },
   {
@@ -12,7 +13,8 @@ final shoes = [
     'title': 'Addidas Shoe',
     'price': 20.2,
     'company': 'Addidas',
-    'size': ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
+    'sizes': ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
+    // 'sizes': [36, 37, 38, 39, 40, 41, 42, 43, 44, 45],
     'image': 'assets/images/shoes_2.png',
   },
   {
@@ -20,7 +22,8 @@ final shoes = [
     'title': 'Bata Women\'s Shoe',
     'price': 44.52,
     'company': 'Bata',
-    'size': ['35', '36', '37', '38'],
+    'sizes': ['35', '36', '37', '38'],
+    // 'sizes': [35, 36, 37, 38],
     'image': 'assets/images/shoes_3.png',
   },
   {
@@ -28,7 +31,8 @@ final shoes = [
     'title': 'Jordan Shoe',
     'price': 420.23,
     'company': 'Nike',
-    'size': ['39', '40', '41', '42', '43', '44', '45'],
+    'sizes': ['39', '40', '41', '42', '43', '44', '45'],
+    // 'sizes': [39, 40, 41, 42, 43, 44, 45],
     'image': 'assets/images/shoes_4.png',
   }
 ];
