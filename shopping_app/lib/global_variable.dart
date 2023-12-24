@@ -36,14 +36,3 @@ final shoes = [
     'image': 'assets/images/shoes_4.png',
   }
 ];
-
-final carts = [
-  {
-    'id': 1,
-    'title': 'Nike Men\'s Shoe',
-    'price': 44.52,
-    'company': 'Nike',
-    'size': 43,
-    'image': 'assets/images/shoes_1.png',
-  },
-];

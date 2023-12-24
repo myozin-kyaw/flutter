@@ -1,13 +1,50 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:shopping_app/components/chip_one.dart';
+import 'package:shopping_app/providers/cart_provider.dart';
 
-class ShoeDetailPage extends StatelessWidget {
+class ShoeDetailPage extends StatefulWidget {
   final Map<String, Object> shoe;
 
   const ShoeDetailPage({
     super.key,
     required this.shoe,
   });
+
+  @override
+  State<ShoeDetailPage> createState() => _ShoeDetailPageState();
+}
+
+class _ShoeDetailPageState extends State<ShoeDetailPage> {
+  void addToCart() {
+    if (context.read<CartProvider>().selectedItem != '') {
+      context.read<CartProvider>().addItem({
+        'id': widget.shoe['id'],
+        'title': widget.shoe['title'],
+        'price': widget.shoe['price'],
+        'company': widget.shoe['company'],
+        'size': context.read<CartProvider>().selectedItem,
+        'image': widget.shoe['image'],
+      });
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text(
+            'Shoe added successfully',
+            style: TextStyle(fontSize: 18),
+          ),
+        ),
+      );
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text(
+            'Please select size',
+            style: TextStyle(fontSize: 18),
+          ),
+        ),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,14 +65,14 @@ class ShoeDetailPage extends StatelessWidget {
             children: [
               const SizedBox(height: 16),
               Text(
-                shoe['title'] as String,
+                widget.shoe['title'] as String,
                 style: Theme.of(context).textTheme.titleLarge,
               ),
               const Spacer(),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Image.asset(
-                  shoe['image'] as String,
+                  widget.shoe['image'] as String,
                 ),
               ),
               const Spacer(flex: 2),
@@ -51,12 +88,12 @@ class ShoeDetailPage extends StatelessWidget {
                   children: [
                     const SizedBox(height: 20.0),
                     Text(
-                      '\$${shoe['price']}',
+                      '\$${widget.shoe['price']}',
                       style: Theme.of(context).textTheme.titleLarge,
                     ),
                     const SizedBox(height: 20.0),
                     ChipOne(
-                      items: shoe['sizes'] as List<String>,
+                      items: widget.shoe['sizes'] as List<String>,
                       fontSize: 16,
                       backgroundColor: const Color.fromRGBO(216, 240, 253, 1),
                       hasBorder: true,
@@ -67,7 +104,7 @@ class ShoeDetailPage extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(20.0),
                       child: ElevatedButton.icon(
-                        onPressed: () {},
+                        onPressed: () => addToCart(),
                         icon: const Icon(
                           Icons.shopping_cart_outlined,
                           color: Colors.black,

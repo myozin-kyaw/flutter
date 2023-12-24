@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:shopping_app/providers/cart_provider.dart';
 
 class ChipOne extends StatefulWidget {
   final List<String> items;
@@ -30,7 +32,15 @@ class _ChipOneState extends State<ChipOne> {
   @override
   void initState() {
     super.initState();
-    selectedItem = widget.items[0];
+    context.read<CartProvider>().selectedItem = selectedItem = '';
+    // selectedItem = widget.items[0].toString();
+  }
+
+  void select(String selected) {
+    context.read<CartProvider>().setSelectedItem(selected);
+    setState(() {
+      selectedItem = selected;
+    });
   }
 
   @override
@@ -45,11 +55,7 @@ class _ChipOneState extends State<ChipOne> {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: GestureDetector(
-              onTap: () {
-                setState(() {
-                  selectedItem = item;
-                });
-              },
+              onTap: () => select(item),
               child: Chip(
                 label: Text(item),
                 backgroundColor: selectedItem == item
