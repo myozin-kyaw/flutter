@@ -10,6 +10,11 @@
 
 - This is how development app look like
 
+### Mobile Screen
+
 ![demo](https://github.com/myozin-kyaw/flutter/assets/108007637/9ac58144-0973-4864-9423-8ac19a3f3256)
 
+### Desktop Screen
+
+<img width="1438" alt="Screenshot 2023-12-25 at 20 01 09" src="https://github.com/myozin-kyaw/flutter/assets/108007637/d2591ef0-a6e8-4f9b-84db-c82151b4d8c1">
 
