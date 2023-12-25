@@ -16,31 +16,28 @@ class HourlyForecastItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 6,
-      child: Container(
-        width: 100,
-        padding: const EdgeInsets.all(8.0),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(
+          vertical: 8.0,
+          horizontal: 28.0,
+        ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               time,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
-              style: const TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 16,
-              ),
+              style: Theme.of(context).textTheme.titleSmall,
             ),
             const SizedBox(
               height: 8,
             ),
-            Icon(
-              icon,
-              size: 30,
-            ),
+            Icon(icon),
             const SizedBox(height: 8),
             Text(
               tempreture,
-              style: const TextStyle(fontSize: 14),
+              style: Theme.of(context).textTheme.bodySmall,
             ),
           ],
         ),

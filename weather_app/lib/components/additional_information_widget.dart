@@ -20,22 +20,16 @@ class AdditionalInformationWidget extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            Icon(
-              icon,
-              size: 30,
-            ),
+            Icon(icon),
             const SizedBox(height: 8),
             Text(
               title,
-              style: const TextStyle(fontSize: 14),
+              style: Theme.of(context).textTheme.bodySmall,
             ),
             const SizedBox(height: 8),
             Text(
               value,
-              style: const TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 16,
-              ),
+              style: Theme.of(context).textTheme.titleSmall,
             ),
           ],
         ),
