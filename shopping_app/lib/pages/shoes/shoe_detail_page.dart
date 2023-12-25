@@ -4,7 +4,7 @@ import 'package:shopping_app/components/chip_one.dart';
 import 'package:shopping_app/providers/cart_provider.dart';
 
 class ShoeDetailPage extends StatefulWidget {
-  final Map<String, Object> shoe;
+  final Map<String, dynamic> shoe;
 
   const ShoeDetailPage({
     super.key,
@@ -73,6 +73,7 @@ class _ShoeDetailPageState extends State<ShoeDetailPage> {
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Image.asset(
                   widget.shoe['image'] as String,
+                  height: 250,
                 ),
               ),
               const Spacer(flex: 2),
@@ -111,7 +112,7 @@ class _ShoeDetailPageState extends State<ShoeDetailPage> {
                         ),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Theme.of(context).primaryColor,
-                          minimumSize: const Size(double.infinity, 50),
+                          fixedSize: const Size(370, 50),
                         ),
                         label: const Text(
                           'Add to cart',
