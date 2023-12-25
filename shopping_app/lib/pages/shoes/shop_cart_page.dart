@@ -8,8 +8,6 @@ class ShopCartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final carts = context.watch<CartProvider>().carts;
-    print(carts);
-    print(context.watch<CartProvider>().selectedItem);
     return Scaffold(
       appBar: AppBar(
         title: const Text(

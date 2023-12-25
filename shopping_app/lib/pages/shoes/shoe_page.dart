@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shopping_app/components/chip_one.dart';
-import 'package:shopping_app/components/shoe_card.dart';
 import 'package:shopping_app/components/shoe_list.dart';
 import 'package:shopping_app/global_variable.dart';
 import 'package:shopping_app/header.dart';
-import 'package:shopping_app/pages/shoes/shoe_detail_page.dart';
 
 class ShoePage extends StatelessWidget {
   const ShoePage({super.key});
@@ -20,7 +18,6 @@ class ShoePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return SafeArea(
       child: Column(
         children: [
