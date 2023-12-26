@@ -14,6 +14,11 @@ class TodoApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         textTheme: const TextTheme(
+          labelLarge: TextStyle(
+            fontSize: 22,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
           titleLarge: TextStyle(
             fontSize: 22,
             fontWeight: FontWeight.bold,

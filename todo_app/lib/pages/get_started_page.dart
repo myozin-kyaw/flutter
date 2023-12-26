@@ -8,11 +8,17 @@ class GetStartedPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 40.0),
+        child: Container(
+          width: double.maxFinite,
+          height: double.maxFinite,
+          padding: const EdgeInsets.symmetric(horizontal: 30.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const Spacer(),
+              Image.asset(
+                'assets/images/todo_get_started.jpeg',
+              ),
               const Spacer(),
               Text(
                 'Gets things done with TODO',
