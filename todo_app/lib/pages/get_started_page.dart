@@ -16,9 +16,7 @@ class GetStartedPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Spacer(),
-              Image.asset(
-                'assets/images/todo_get_started.jpeg',
-              ),
+              Image.asset('assets/images/todo_get_started.jpeg'),
               const Spacer(),
               Text(
                 'Gets things done with TODO',
@@ -36,14 +34,14 @@ class GetStartedPage extends StatelessWidget {
                   Navigator.of(context).push(
                     MaterialPageRoute(
                       builder: (context) {
-                        return const ToDoPage();
+                        return const TodoPage();
                       },
                     ),
                   );
                 },
                 style: TextButton.styleFrom(
                   elevation: 4,
-                  backgroundColor: Colors.cyanAccent,
+                  backgroundColor: Theme.of(context).colorScheme.primary,
                   foregroundColor: Colors.white,
                   textStyle: Theme.of(context).textTheme.titleSmall,
                   minimumSize: const Size(double.infinity, 50),
