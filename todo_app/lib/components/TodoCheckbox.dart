@@ -24,6 +24,10 @@ class _TodoCheckboxState extends State<TodoCheckbox> {
   @override
   Widget build(BuildContext context) {
     return Checkbox(
+      side: const BorderSide(
+        color: Colors.black12,
+        strokeAlign: 3,
+      ),
       value: isCheck,
       onChanged: (bool? value) {
         setState(() {
