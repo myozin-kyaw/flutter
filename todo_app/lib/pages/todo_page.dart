@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/components/TodoCheckbox.dart';
 import 'package:todo_app/global_variables.dart';
 
 class TodoPage extends StatelessWidget {
@@ -47,7 +48,7 @@ class TodoPage extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
                   return SizedBox(
-                    width: 90,
+                    width: 80,
                     child: Card(
                       color: weekDays[index]['is_active'] as bool
                           ? Theme.of(context).colorScheme.primary
@@ -102,34 +103,107 @@ class TodoPage extends StatelessWidget {
             ),
             const SizedBox(height: 16.0),
             SizedBox(
-              height: 100,
+              height: 220,
               child: ListView.builder(
                 itemCount: todos.length,
                 itemBuilder: (context, index) {
-                  return const Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
+                  return const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 8.0),
+                    child: SizedBox(
+                      height: 60.0,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('*'),
-                          Text(
-                            'Do laundary',
-                            style: TextStyle(
-                              fontSize: 18,
-                            ),
+                          Row(
+                            children: [
+                              Text('*'),
+                              SizedBox(width: 10),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Do laundary',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                    ),
+                                  ),
+                                  Text(
+                                    '12:00',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
                           ),
+                          TodoCheckbox(isChecked: false),
                         ],
                       ),
-                      SizedBox(height: 5.0),
-                      Text(
-                        '12:00',
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.grey,
-                        ),
+                    ),
+                  );
+                },
+              ),
+            ),
+            Divider(
+              height: 40,
+              thickness: 1,
+              indent: 0,
+              endIndent: 0,
+              color: Colors.grey[200],
+            ),
+            const Text(
+              'Done',
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+                color: Colors.grey,
+              ),
+            ),
+            const SizedBox(height: 16.0),
+            SizedBox(
+              height: 220,
+              child: ListView.builder(
+                itemCount: todos.length,
+                itemBuilder: (context, index) {
+                  return const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 8.0),
+                    child: SizedBox(
+                      height: 60.0,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Text('*'),
+                              SizedBox(width: 10),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Do laundary',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                    ),
+                                  ),
+                                  Text(
+                                    '12:00',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                          TodoCheckbox(isChecked: true),
+                        ],
                       ),
-                    ],
+                    ),
                   );
                 },
               ),

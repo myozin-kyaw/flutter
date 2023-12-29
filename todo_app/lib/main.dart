@@ -39,14 +39,14 @@ class TodoApp extends StatelessWidget {
           seedColor: Colors.cyan,
           primary: Colors.cyan[300],
         ),
-        checkboxTheme: const CheckboxThemeData(
-          checkColor: MaterialStatePropertyAll(
-            Colors.white,
-          ),
-          fillColor: MaterialStatePropertyAll(
-            Color.fromRGBO(83, 195, 202, 1),
-          ),
-        ),
+        // checkboxTheme: const CheckboxThemeData(
+        //   checkColor: MaterialStatePropertyAll(
+        //     Colors.white,
+        //   ),
+        //   fillColor: MaterialStatePropertyAll(
+        //     Color.fromRGBO(83, 195, 202, 1),
+        //   ),
+        // ),
       ),
       home: const GetStartedPage(),
     );
