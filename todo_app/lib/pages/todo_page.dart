@@ -28,6 +28,14 @@ class TodoPage extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(50),
+        ),
+        child: const Icon(Icons.add),
+      ),
       backgroundColor: Colors.white,
       body: SafeArea(
         minimum: const EdgeInsets.all(20.0),
