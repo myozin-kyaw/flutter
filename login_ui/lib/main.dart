@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:login_ui/login_screen.dart';
+import 'package:login_ui/pallete.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,20 +13,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.deepPurple,
+        ),
+        scaffoldBackgroundColor: Pallete.backgroundColor,
       ),
-      home: const MyHomePage(),
+      home: const LoginScreen(),
     );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
   }
 }
