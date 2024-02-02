@@ -17,6 +17,7 @@ class CustomTextField extends StatelessWidget {
       ),
     );
     return TextFormField(
+      controller: controller,
       decoration: InputDecoration(
         hintText: hintText,
         border: border,
