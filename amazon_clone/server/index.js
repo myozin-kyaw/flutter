@@ -14,11 +14,14 @@ const { default: mongoose } = require('mongoose');
  */
 const PORT = 3000;
 const app = express();
-const DB = 'mongodb+srv://myozinkyaw:<password>@cluster0.axia3ax.mongodb.net/?retryWrites=true&w=majority';
+// const DB = 'mongodb+srv://myozinkyaw:<password>@cluster0.axia3ax.mongodb.net/?retryWrites=true&w=majority';
+
+const DB = 'mongodb+srv://myozinkyaw:W24Xmm8T3Anh45l9@cluster0.axia3ax.mongodb.net/?retryWrites=true&w=majority';
 
 /**
  * middleware
  */
+app.use(express.json());
 app.use(authRouter);
 
 /**
@@ -31,4 +34,8 @@ mongoose
 
 app.listen(PORT, "0.0.0.0", () => {
     console.log(`Connected to the port ${PORT}`);
+});
+
+app.get('/', function (req, res) {
+    return res.json({ message: 'Connedted' });
 });
