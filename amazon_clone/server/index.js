@@ -16,8 +16,6 @@ const PORT = 3000;
 const app = express();
 // const DB = 'mongodb+srv://myozinkyaw:<password>@cluster0.axia3ax.mongodb.net/?retryWrites=true&w=majority';
 
-const DB = 'mongodb+srv://myozinkyaw:W24Xmm8T3Anh45l9@cluster0.axia3ax.mongodb.net/?retryWrites=true&w=majority';
-
 /**
  * middleware
  */
