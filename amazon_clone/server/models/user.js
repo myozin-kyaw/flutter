@@ -32,7 +32,7 @@ const userSchema = mongoose.Schema({
     address: {
         trim: true,
         type: String,
-        default: '',
+        default: 'test',
     },
     type: {
         trim: true,

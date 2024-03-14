@@ -25,7 +25,7 @@ authRouter.post('/api/signup', async function (req, res) {
 
         user = await user.save();
 
-        return res.json({ user });
+        res.json({ user });
 
     } catch (e) {
         return res.status(500).json({ message: e.message });

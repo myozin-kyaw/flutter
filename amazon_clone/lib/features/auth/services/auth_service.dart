@@ -19,7 +19,7 @@ class AuthService {
         name: name,
         email: email,
         password: password,
-        type: '',
+        type: 'user',
         address: '',
         token: '',
       );
@@ -40,6 +40,50 @@ class AuthService {
             showSnackBar(
               context,
               'Account created! Login with the same credientials',
+            );
+          },
+        );
+      }
+    } catch (e) {
+      if (context.mounted) {
+        print(e);
+        showSnackBar(context, e.toString());
+      }
+    }
+  }
+
+  void signIn({
+    required BuildContext context,
+    required String email,
+    required String password,
+  }) async {
+    try {
+      User user = User(
+        id: '',
+        name: '',
+        email: email,
+        password: password,
+        type: '',
+        address: '',
+        token: '',
+      );
+
+      http.Response res = await http.post(
+        Uri.parse('$uri/api/signin'),
+        body: user.toJson(),
+        headers: <String, String>{
+          'Content-Type': 'application/json; charset=UTF-8',
+        },
+      );
+
+      if (context.mounted) {
+        httpErrorHandle(
+          response: res,
+          context: context,
+          onSuccess: () {
+            showSnackBar(
+              context,
+              'Login successfully.',
             );
           },
         );
