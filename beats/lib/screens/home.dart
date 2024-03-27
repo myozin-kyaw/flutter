@@ -32,7 +32,7 @@ class Home extends StatelessWidget {
           ),
         ],
         title: const Text(
-          'Beats',
+          'Music Player',
           style: TextStyle(
             fontSize: 18,
             color: whiteColor,
