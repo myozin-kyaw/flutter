@@ -80,6 +80,8 @@ class Home extends StatelessWidget {
                           tileColor: bgColor,
                           title: Text(
                             snapshot.data![index].displayNameWOExt.toString(),
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
                             style: const TextStyle(
                               color: whiteColor,
                               fontSize: 15,
@@ -106,7 +108,7 @@ class Home extends StatelessWidget {
                           trailing: controller.playIndex.value == index &&
                                   controller.isPlaying.value
                               ? const Icon(
-                                  Icons.play_arrow,
+                                  Icons.pause,
                                   color: whiteColor,
                                   size: 26,
                                 )

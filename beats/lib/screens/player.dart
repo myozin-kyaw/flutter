@@ -133,8 +133,14 @@ class Player extends StatelessWidget {
                         children: [
                           IconButton(
                             onPressed: () {
-                              final previousSongIndex =
-                                  controller.playIndex.value - 1;
+                              var previousSongIndex = 0;
+                              if (controller.playIndex.value == 0) {
+                                previousSongIndex = songs.length - 1;
+                              } else {
+                                previousSongIndex =
+                                    controller.playIndex.value - 1;
+                              }
+
                               controller.playSong(
                                 songs[previousSongIndex].uri,
                                 previousSongIndex,
@@ -177,8 +183,13 @@ class Player extends StatelessWidget {
                           ),
                           IconButton(
                             onPressed: () {
-                              final previousSongIndex =
+                              var previousSongIndex =
                                   controller.playIndex.value + 1;
+                              if ((songs.length - 1) ==
+                                  controller.playIndex.value) {
+                                previousSongIndex = 0;
+                              }
+
                               controller.playSong(
                                 songs[previousSongIndex].uri,
                                 previousSongIndex,
